@@ -79,3 +79,6 @@ osmocheckpoints
 
 ./scripts/batch_eval
 ./scripts/batch_osmo_scp
+# SpecStory explanation file
+.specstory/.what-is-this.md
+.specstory

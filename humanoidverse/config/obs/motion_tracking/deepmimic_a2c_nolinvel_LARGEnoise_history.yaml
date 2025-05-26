@@ -9,11 +9,11 @@ obs:
       dof_pos,
       dof_vel,
       actions,
-      ref_motion_phase,
+      # ref_motion_phase,
       # dif_local_rigid_body_pos,
       # local_ref_rigid_body_pos,
       # history,
-      history_actor
+      # history_actor
     ]
 
     critic_obs: [
@@ -32,12 +32,12 @@ obs:
   obs_auxiliary: # define those coumpounds in obs_dict, for example, you can define different long/short history with different length
 
     history_actor: {
-      base_ang_vel: 4,
-      projected_gravity: 4,
-      dof_pos: 4,
-      dof_vel: 4,
-      actions: 4,
-      ref_motion_phase: 4
+      # base_ang_vel: 4,
+      # projected_gravity: 4,
+      # dof_pos: 4,
+      # dof_vel: 4,
+      # actions: 4,
+      # ref_motion_phase: 4
     }
 
     history_critic: {

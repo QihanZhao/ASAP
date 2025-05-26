@@ -420,16 +420,15 @@ class LeggedRobotMotionTracking(LeggedRobotBase):
             offset = self.env_origins
             motion_res = self._motion_lib.get_motion_state(self.motion_ids, motion_times, offset=offset)
 
+            root_pos = motion_res['root_pos'][env_ids]
+            root_rot = motion_res['root_rot'][env_ids]
+            root_vel = motion_res['root_vel'][env_ids]
+            root_ang_vel = motion_res['root_ang_vel'][env_ids]
 
             root_pos_noise = self.config.init_noise_scale.root_pos * self.config.noise_to_initial_level
             root_rot_noise = self.config.init_noise_scale.root_rot * 3.14 / 180 * self.config.noise_to_initial_level
             root_vel_noise = self.config.init_noise_scale.root_vel * self.config.noise_to_initial_level
             root_ang_vel_noise = self.config.init_noise_scale.root_ang_vel * self.config.noise_to_initial_level
-
-            root_pos = motion_res['root_pos'][env_ids]
-            root_rot = motion_res['root_rot'][env_ids]
-            root_vel = motion_res['root_vel'][env_ids]
-            root_ang_vel = motion_res['root_ang_vel'][env_ids]
 
             self.simulator.robot_root_states[env_ids, :3] = root_pos + torch.randn_like(root_pos) * root_pos_noise
             if self.config.simulator.config.name == 'isaacgym':
@@ -471,12 +470,12 @@ class LeggedRobotMotionTracking(LeggedRobotBase):
         offset = self.env_origins
         motion_res = self._motion_lib.get_motion_state(self.motion_ids, motion_times, offset=offset)
 
-        dof_pos_noise = self.config.init_noise_scale.dof_pos * self.config.noise_to_initial_level
-        dof_vel_noise = self.config.init_noise_scale.dof_vel * self.config.noise_to_initial_level
         dof_pos = motion_res['dof_pos'][env_ids]
         dof_vel = motion_res['dof_vel'][env_ids]
-        self.simulator.dof_pos[env_ids] = dof_pos + torch.randn_like(dof_pos) * dof_pos_noise
-        self.simulator.dof_vel[env_ids] = dof_vel + torch.randn_like(dof_vel) * dof_vel_noise
+        dof_pos_noise = self.config.init_noise_scale.dof_pos * self.config.noise_to_initial_level * torch.abs(dof_pos)
+        dof_vel_noise = self.config.init_noise_scale.dof_vel * self.config.noise_to_initial_level * torch.abs(dof_vel)
+        self.simulator.dof_pos[env_ids] = dof_pos + (torch.rand_like(dof_pos) * 2. - 1.) * dof_pos_noise
+        self.simulator.dof_vel[env_ids] = dof_vel + (torch.rand_like(dof_vel) * 2. - 1.) * dof_vel_noise
 
 
     def _post_physics_step(self):

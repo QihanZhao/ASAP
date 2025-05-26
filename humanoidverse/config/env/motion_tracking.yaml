@@ -43,8 +43,8 @@ env:
 
     noise_to_initial_level: 1.0
     init_noise_scale: 
-      dof_pos: 0.02
-      dof_vel: 0.02
+      dof_pos: 0.1 #0.02
+      dof_vel: 0.1 #0.02
       root_pos: 0.02
       root_rot: 0.05 # degree, * 3.14 / 180
       root_vel: 0.02

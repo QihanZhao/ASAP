@@ -232,6 +232,9 @@ class LeggedRobotBase(BaseTask):
 
     def _apply_force_in_physics_step(self):
         self.torques = self._compute_torques(self.actions_after_delay).view(self.torques.shape)
+        
+        # print("max|action|:", torch.abs(self.actions_after_delay).max().item(), "max|torque|:", torch.abs(self.torques).max().item())
+        
         self.simulator.apply_torques_at_dof(self.torques)
 
     def _post_physics_step(self):
@@ -291,6 +294,7 @@ class LeggedRobotBase(BaseTask):
         self.base_ang_vel[:] = quat_rotate_inverse(self.base_quat, self.simulator.robot_root_states[:, 10:13])
         # print("self.base_ang_vel", self.base_ang_vel)
         self.projected_gravity[:] = quat_rotate_inverse(self.base_quat, self.gravity_vec)
+        # print(self.base_quat[0], self.projected_gravity[0])
 
     def _update_tasks_callback(self):
         if self.config.domain_rand.push_robots:
