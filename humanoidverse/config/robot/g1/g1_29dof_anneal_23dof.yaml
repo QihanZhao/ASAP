@@ -244,15 +244,15 @@ robot:
     extend_config:
       - joint_name: "left_hand_link"
         parent_name: "left_elbow_link"
-        pos: [0.25, 0.0, 0.0]
+        pos: [0.165, 0.0, 0.0]
         rot: [1.0, 0.0, 0.0, 0.0] # w x y z
       - joint_name: "right_hand_link"
         parent_name: "right_elbow_link"
-        pos: [0.25, 0.0, 0.0]
+        pos: [0.165, 0.0, 0.0]
         rot: [1.0, 0.0, 0.0, 0.0] # w x y z
       - joint_name: "head_link"
         parent_name: "torso_link"
-        pos: [0.0, 0.0, 0.42]
+        pos: [0.0, 0.0, 0.52]
         rot: [1.0, 0.0, 0.0, 0.0] # w x y z
 
 

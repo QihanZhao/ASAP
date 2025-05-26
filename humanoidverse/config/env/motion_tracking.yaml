@@ -41,14 +41,14 @@ env:
     resample_motion_when_training: True
     resample_time_interval_s: 2000
 
-    noise_to_initial_level: 0
+    noise_to_initial_level: 1.0
     init_noise_scale: 
-      dof_pos: 0.1
-      dof_vel: 0.15
-      root_pos: 0.05
-      root_rot: 10 # degree, * 3.14 / 180
-      root_vel: 0.01
-      root_ang_vel: 0.01
+      dof_pos: 0.02
+      dof_vel: 0.02
+      root_pos: 0.02
+      root_rot: 0.05 # degree, * 3.14 / 180
+      root_vel: 0.02
+      root_ang_vel: 0.02
 
     use_teleop_control: False
     enforce_randomize_motion_start_eval: False

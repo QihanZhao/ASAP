@@ -5,11 +5,11 @@ defaults:
   - domain_rand_base
 
 domain_rand:
-  push_robots : False
+  push_robots : False #Z
   push_interval_s : [5, 10]
   max_push_vel_xy : 1.0
 
-  randomize_friction : False
+  randomize_friction : False #Z
   # randomize_friction : False
   friction_range : [-0.6, 1.2]
 
@@ -28,11 +28,11 @@ domain_rand:
   randomize_link_body_names : [
       'pelvis', 'left_hip_yaw_link', 'left_hip_roll_link', 'left_hip_pitch_link', 'left_knee_link',
       'right_hip_yaw_link', 'right_hip_roll_link', 'right_hip_pitch_link', 'right_knee_link',
-  ]
+  ] #NI
 
   randomize_pd_gain : False
-  kp_range : [0.75, 1.25]
-  kd_range : [0.75, 1.25]
+  kp_range : [0.75, 1.25] #Z
+  kd_range : [0.75, 1.25] #Z
 
 
   randomize_torque_rfi : False
@@ -40,7 +40,7 @@ domain_rand:
   randomize_rfi_lim : False
   rfi_lim_range : [0.5, 1.5]
 
-  randomize_ctrl_delay : False
+  randomize_ctrl_delay : True
   ctrl_delay_step_range : [0, 2] # integer max real delay is 90ms
 
   randomize_motion_ref_xyz: False # head only for now

@@ -43,8 +43,9 @@ def on_press(key, env):
         pass
 
 def listen_for_keypress(env):
-    with keyboard.Listener(on_press=lambda key: on_press(key, env)) as listener:
-        listener.join()
+    pass
+    # with keyboard.Listener(on_press=lambda key: on_press(key, env)) as listener:
+    #     listener.join()
 
 
 # from humanoidverse.envs.base_task.base_task import BaseTask
