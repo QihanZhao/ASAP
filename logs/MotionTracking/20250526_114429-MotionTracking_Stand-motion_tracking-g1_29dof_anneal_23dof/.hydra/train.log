@@ -1,0 +1,343 @@
+2025-05-26 11:44:32.903 | INFO     | humanoidverse.utils.helpers:pre_process_config:44 - obs_dims: {'base_lin_vel': 3, 'base_ang_vel': 3, 'projected_gravity': 3, 'dof_pos': 23, 'dof_vel': 23, 'actions': 23, 'dif_local_rigid_body_pos': 81, 'local_ref_rigid_body_pos': 81, 'ref_motion_phase': 1}
+2025-05-26 11:44:32.908 | INFO     | humanoidverse.utils.helpers:pre_process_config:51 - auxiliary_obs_dims: {'history_actor': 0, 'history_critic': 316}
+2025-05-26 11:44:32.909 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - actor_obs: base_ang_vel has dim: 3
+2025-05-26 11:44:32.911 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - actor_obs: projected_gravity has dim: 3
+2025-05-26 11:44:32.912 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - actor_obs: dof_pos has dim: 23
+2025-05-26 11:44:32.913 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - actor_obs: dof_vel has dim: 23
+2025-05-26 11:44:32.915 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - actor_obs: actions has dim: 23
+2025-05-26 11:44:32.916 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - critic_obs: base_lin_vel has dim: 3
+2025-05-26 11:44:32.917 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - critic_obs: base_ang_vel has dim: 3
+2025-05-26 11:44:32.918 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - critic_obs: projected_gravity has dim: 3
+2025-05-26 11:44:32.920 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - critic_obs: dof_pos has dim: 23
+2025-05-26 11:44:32.921 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - critic_obs: dof_vel has dim: 23
+2025-05-26 11:44:32.922 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - critic_obs: actions has dim: 23
+2025-05-26 11:44:32.923 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - critic_obs: ref_motion_phase has dim: 1
+2025-05-26 11:44:32.925 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - critic_obs: dif_local_rigid_body_pos has dim: 81
+2025-05-26 11:44:32.926 | INFO     | humanoidverse.utils.helpers:pre_process_config:58 - critic_obs: local_ref_rigid_body_pos has dim: 81
+2025-05-26 11:44:32.926 | INFO     | humanoidverse.utils.helpers:pre_process_config:61 - critic_obs: history_critic has dim: 316
+2025-05-26 11:44:32.927 | INFO     | humanoidverse.utils.helpers:pre_process_config:63 - algo_obs_dim_dict: {'actor_obs': 75, 'critic_obs': 557}
+2025-05-26 11:44:32.927 | DEBUG    | humanoidverse.utils.helpers:pre_process_config:73 - PPO CONFIG
+2025-05-26 11:44:32.927 | DEBUG    | humanoidverse.utils.helpers:pre_process_config:74 - {'actor': {'input_dim': ['actor_obs'], 'output_dim': ['robot_action_dim'], 'layer_config': {'type': 'MLP', 'hidden_dims': [512, 256, 128], 'activation': 'ELU'}}, 'critic': {'type': 'MLP', 'input_dim': ['critic_obs'], 'output_dim': [1], 'layer_config': {'type': 'MLP', 'hidden_dims': [512, 256, 128], 'activation': 'ELU'}}}
+2025-05-26 11:44:35.320 | INFO     | humanoidverse.utils.motion_lib.torch_humanoid_batch:<module>:41 - Using Humanoid Batch
+2025-05-26 11:44:36.334 | INFO     | humanoidverse.simulator.isaacgym.isaacgym:setup:60 - Creating Sim...
+2025-05-26 11:44:36.334 | INFO     | humanoidverse.simulator.isaacgym.isaacgym:_create_ground_plane:103 - Creating plane terrain
+2025-05-26 11:44:36.335 | INFO     | humanoidverse.simulator.isaacgym.isaacgym:_create_ground_plane:110 - Created plane terrain
+2025-05-26 11:44:41.397 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:277 - Number of rigid shapes does not match number of bodies
+2025-05-26 11:44:41.397 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:278 - len(RigidShapeProperties): 39
+2025-05-26 11:44:41.397 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:279 - self.num_bodies: 24
+2025-05-26 11:44:41.397 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:280 - Only randomizing friction of number of bodies
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 0: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 1: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 2: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 3: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 4: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 5: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 6: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 7: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 8: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 9: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 10: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.398 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 11: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 12: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 13: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 14: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 15: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 16: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 17: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 18: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 19: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 20: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 21: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 22: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.399 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 23: 0.4210631847381592 (after randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 0: 3.814000129699707 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 1: 1.350000023841858 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 2: 1.5199999809265137 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 3: 1.7019999027252197 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 4: 1.9320000410079956 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 5: 0.07400000095367432 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 6: 0.6079999804496765 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 7: 1.350000023841858 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 8: 1.5199999809265137 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 9: 1.7019999027252197 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 10: 1.9320000410079956 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 11: 0.07400000095367432 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 12: 0.6079999804496765 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 13: 0.24400000274181366 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 14: 0.04699999839067459 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 15: 9.600001335144043 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 16: 0.7179999947547913 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 17: 0.6430000066757202 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 18: 0.734000027179718 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 19: 1.4240710735321045 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 20: 0.7179999947547913 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 21: 0.6430000066757202 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 22: 0.734000027179718 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 23: 1.4240710735321045 (before randomization)
+2025-05-26 11:44:41.422 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:338 - Total mass 35.11514353007078 (before randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 0: 3.814000129699707 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 1: 1.350000023841858 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 2: 1.5199999809265137 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 3: 1.7019999027252197 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 4: 1.9320000410079956 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 5: 0.07400000095367432 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 6: 0.6079999804496765 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 7: 1.350000023841858 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 8: 1.5199999809265137 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 9: 1.7019999027252197 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 10: 1.9320000410079956 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 11: 0.07400000095367432 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 12: 0.6079999804496765 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 13: 0.24400000274181366 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 14: 0.04699999839067459 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 15: 9.600001335144043 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 16: 0.7179999947547913 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 17: 0.6430000066757202 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 18: 0.734000027179718 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 19: 1.4240710735321045 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 20: 0.7179999947547913 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 21: 0.6430000066757202 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 22: 0.734000027179718 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 23: 1.4240710735321045 (after randomization)
+2025-05-26 11:44:41.423 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:394 - Total mass 35.11514353007078 (afters randomization)
+2025-05-26 11:44:41.424 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:277 - Number of rigid shapes does not match number of bodies
+2025-05-26 11:44:41.424 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:278 - len(RigidShapeProperties): 39
+2025-05-26 11:44:41.424 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:279 - self.num_bodies: 24
+2025-05-26 11:44:41.424 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:280 - Only randomizing friction of number of bodies
+2025-05-26 11:44:41.424 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 0: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 1: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 2: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 3: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 4: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 5: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 6: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 7: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 8: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 9: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 10: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 11: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 12: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 13: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 14: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.425 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 15: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.426 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 16: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.426 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 17: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.426 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 18: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.426 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 19: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.426 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 20: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.426 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 21: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.426 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 22: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.426 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 23: 0.10365504026412964 (after randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 0: 3.814000129699707 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 1: 1.350000023841858 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 2: 1.5199999809265137 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 3: 1.7019999027252197 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 4: 1.9320000410079956 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 5: 0.07400000095367432 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 6: 0.6079999804496765 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 7: 1.350000023841858 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 8: 1.5199999809265137 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 9: 1.7019999027252197 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 10: 1.9320000410079956 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 11: 0.07400000095367432 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 12: 0.6079999804496765 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 13: 0.24400000274181366 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 14: 0.04699999839067459 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 15: 9.600001335144043 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 16: 0.7179999947547913 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 17: 0.6430000066757202 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 18: 0.734000027179718 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 19: 1.4240710735321045 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 20: 0.7179999947547913 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 21: 0.6430000066757202 (before randomization)
+2025-05-26 11:44:41.427 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 22: 0.734000027179718 (before randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 23: 1.4240710735321045 (before randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:338 - Total mass 35.11514353007078 (before randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 0: 3.814000129699707 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 1: 1.350000023841858 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 2: 1.5199999809265137 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 3: 1.7019999027252197 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 4: 1.9320000410079956 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 5: 0.07400000095367432 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 6: 0.6079999804496765 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 7: 1.350000023841858 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 8: 1.5199999809265137 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 9: 1.7019999027252197 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 10: 1.9320000410079956 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 11: 0.07400000095367432 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 12: 0.6079999804496765 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 13: 0.24400000274181366 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 14: 0.04699999839067459 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 15: 9.600001335144043 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 16: 0.7179999947547913 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 17: 0.6430000066757202 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 18: 0.734000027179718 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 19: 1.4240710735321045 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 20: 0.7179999947547913 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 21: 0.6430000066757202 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 22: 0.734000027179718 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 23: 1.4240710735321045 (after randomization)
+2025-05-26 11:44:41.428 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:394 - Total mass 35.11514353007078 (afters randomization)
+2025-05-26 11:44:41.429 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:277 - Number of rigid shapes does not match number of bodies
+2025-05-26 11:44:41.429 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:278 - len(RigidShapeProperties): 39
+2025-05-26 11:44:41.429 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:279 - self.num_bodies: 24
+2025-05-26 11:44:41.429 | WARNING  | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:280 - Only randomizing friction of number of bodies
+2025-05-26 11:44:41.429 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 0: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 1: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 2: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 3: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 4: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 5: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 6: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 7: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 8: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 9: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 10: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 11: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 12: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 13: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.430 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 14: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.431 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 15: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.431 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 16: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.431 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 17: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.431 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 18: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.431 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 19: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.431 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 20: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.431 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 21: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.431 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 22: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.431 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_shape_props:291 - Friction of shape 23: 0.27336692810058594 (after randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 0: 3.814000129699707 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 1: 1.350000023841858 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 2: 1.5199999809265137 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 3: 1.7019999027252197 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 4: 1.9320000410079956 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 5: 0.07400000095367432 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 6: 0.6079999804496765 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 7: 1.350000023841858 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 8: 1.5199999809265137 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 9: 1.7019999027252197 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 10: 1.9320000410079956 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 11: 0.07400000095367432 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 12: 0.6079999804496765 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 13: 0.24400000274181366 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 14: 0.04699999839067459 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 15: 9.600001335144043 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 16: 0.7179999947547913 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 17: 0.6430000066757202 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 18: 0.734000027179718 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 19: 1.4240710735321045 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 20: 0.7179999947547913 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 21: 0.6430000066757202 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 22: 0.734000027179718 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:337 - Mass of body 23: 1.4240710735321045 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:338 - Total mass 35.11514353007078 (before randomization)
+2025-05-26 11:44:41.432 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 0: 3.814000129699707 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 1: 1.350000023841858 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 2: 1.5199999809265137 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 3: 1.7019999027252197 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 4: 1.9320000410079956 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 5: 0.07400000095367432 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 6: 0.6079999804496765 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 7: 1.350000023841858 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 8: 1.5199999809265137 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 9: 1.7019999027252197 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 10: 1.9320000410079956 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 11: 0.07400000095367432 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 12: 0.6079999804496765 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 13: 0.24400000274181366 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 14: 0.04699999839067459 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 15: 9.600001335144043 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 16: 0.7179999947547913 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 17: 0.6430000066757202 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 18: 0.734000027179718 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 19: 1.4240710735321045 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 20: 0.7179999947547913 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 21: 0.6430000066757202 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 22: 0.734000027179718 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:392 - Mass of body 23: 1.4240710735321045 (after randomization)
+2025-05-26 11:44:41.433 | DEBUG    | humanoidverse.simulator.isaacgym.isaacgym:_process_rigid_body_props:394 - Total mass 35.11514353007078 (afters randomization)
+2025-05-26 11:44:48.914 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_hip_pitch_joint were defined, setting them to 100.0 and 2.5
+2025-05-26 11:44:48.914 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_hip_roll_joint were defined, setting them to 100.0 and 2.5
+2025-05-26 11:44:48.914 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_hip_yaw_joint were defined, setting them to 100.0 and 2.5
+2025-05-26 11:44:48.915 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_knee_joint were defined, setting them to 200.0 and 5.0
+2025-05-26 11:44:48.915 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_ankle_pitch_joint were defined, setting them to 20.0 and 0.20000000298023224
+2025-05-26 11:44:48.915 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_ankle_roll_joint were defined, setting them to 20.0 and 0.10000000149011612
+2025-05-26 11:44:48.916 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_hip_pitch_joint were defined, setting them to 100.0 and 2.5
+2025-05-26 11:44:48.916 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_hip_roll_joint were defined, setting them to 100.0 and 2.5
+2025-05-26 11:44:48.916 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_hip_yaw_joint were defined, setting them to 100.0 and 2.5
+2025-05-26 11:44:48.916 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_knee_joint were defined, setting them to 200.0 and 5.0
+2025-05-26 11:44:48.917 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_ankle_pitch_joint were defined, setting them to 20.0 and 0.20000000298023224
+2025-05-26 11:44:48.917 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_ankle_roll_joint were defined, setting them to 20.0 and 0.10000000149011612
+2025-05-26 11:44:48.917 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint waist_yaw_joint were defined, setting them to 400.0 and 5.0
+2025-05-26 11:44:48.917 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint waist_roll_joint were defined, setting them to 400.0 and 5.0
+2025-05-26 11:44:48.918 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint waist_pitch_joint were defined, setting them to 400.0 and 5.0
+2025-05-26 11:44:48.918 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_shoulder_pitch_joint were defined, setting them to 90.0 and 2.0
+2025-05-26 11:44:48.918 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_shoulder_roll_joint were defined, setting them to 60.0 and 1.0
+2025-05-26 11:44:48.919 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_shoulder_yaw_joint were defined, setting them to 20.0 and 0.4000000059604645
+2025-05-26 11:44:48.919 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint left_elbow_joint were defined, setting them to 60.0 and 1.0
+2025-05-26 11:44:48.919 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_shoulder_pitch_joint were defined, setting them to 90.0 and 2.0
+2025-05-26 11:44:48.919 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_shoulder_roll_joint were defined, setting them to 60.0 and 1.0
+2025-05-26 11:44:48.920 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_shoulder_yaw_joint were defined, setting them to 20.0 and 0.4000000059604645
+2025-05-26 11:44:48.920 | DEBUG    | humanoidverse.envs.legged_base_task.legged_robot_base:_init_buffers:75 - PD gain of joint right_elbow_joint were defined, setting them to 60.0 and 1.0
+2025-05-26 11:44:48.925 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:132 - [32mTairan set reward on 20241025[0m
+2025-05-26 11:44:48.925 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: teleop_body_position_extend = 1.0
+2025-05-26 11:44:48.925 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: teleop_vr_3point = 1.6
+2025-05-26 11:44:48.925 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: teleop_body_position_feet = 2.1
+2025-05-26 11:44:48.925 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: teleop_body_rotation_extend = 0.5
+2025-05-26 11:44:48.925 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: teleop_body_ang_velocity_extend = 0.5
+2025-05-26 11:44:48.925 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: teleop_body_velocity_extend = 0.5
+2025-05-26 11:44:48.926 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: teleop_joint_position = 0.75
+2025-05-26 11:44:48.926 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: teleop_joint_velocity = 0.5
+2025-05-26 11:44:48.926 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: penalty_torques = -1e-06
+2025-05-26 11:44:48.926 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: penalty_action_rate = -0.5
+2025-05-26 11:44:48.926 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: penalty_feet_ori = -2.0
+2025-05-26 11:44:48.926 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: feet_heading_alignment = -0.1
+2025-05-26 11:44:48.926 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: penalty_slippage = -1.0
+2025-05-26 11:44:48.926 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: limits_dof_pos = -10.0
+2025-05-26 11:44:48.926 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: limits_dof_vel = -5.0
+2025-05-26 11:44:48.927 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: limits_torque = -5.0
+2025-05-26 11:44:48.927 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:137 - Scale: termination = -200.0
+2025-05-26 11:44:48.927 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:148 - [32mUse Reward Penalty: True[0m
+2025-05-26 11:44:48.927 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:150 - Penalty Reward Names: ['penalty_torques', 'penalty_dof_acc', 'penalty_dof_vel', 'penalty_action_rate', 'limits_dof_pos', 'limits_dof_vel', 'limits_torque', 'feet_heading_alignment', 'penalty_feet_ori', 'penalty_slippage']
+2025-05-26 11:44:48.927 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:151 - Penalty Reward Initial Scale: 0.1
+2025-05-26 11:44:48.927 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:158 - Use Reward Limits DOF Curriculum: True
+2025-05-26 11:44:48.927 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:159 - Reward Limits DOF Curriculum Initial Limit: 1.15
+2025-05-26 11:44:48.927 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:160 - Reward Limits DOF Curriculum Max Limit: 1.15
+2025-05-26 11:44:48.928 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:161 - Reward Limits DOF Curriculum Min Limit: 0.95
+2025-05-26 11:44:48.928 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:165 - Use Reward Limits DOF Vel Curriculum: True
+2025-05-26 11:44:48.928 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:166 - Reward Limits DOF Vel Curriculum Initial Limit: 1.15
+2025-05-26 11:44:48.928 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:167 - Reward Limits DOF Vel Curriculum Max Limit: 1.25
+2025-05-26 11:44:48.928 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:168 - Reward Limits DOF Vel Curriculum Min Limit: 0.95
+2025-05-26 11:44:48.928 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:172 - Use Reward Limits Torque Curriculum: True
+2025-05-26 11:44:48.928 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:173 - Reward Limits Torque Curriculum Initial Limit: 1.15
+2025-05-26 11:44:48.928 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:174 - Reward Limits Torque Curriculum Max Limit: 1.25
+2025-05-26 11:44:48.928 | INFO     | humanoidverse.envs.legged_base_task.legged_robot_base:_prepare_reward_function:175 - Reward Limits Torque Curriculum Min Limit: 0.85
+2025-05-26 11:44:48.932 | INFO     | humanoidverse.envs.env_utils.history_handler:__init__:25 - [32mHistory Handler Initialized[0m
+2025-05-26 11:44:48.932 | INFO     | humanoidverse.envs.env_utils.history_handler:__init__:27 - Key: base_lin_vel, Value: 4
+2025-05-26 11:44:48.932 | INFO     | humanoidverse.envs.env_utils.history_handler:__init__:27 - Key: base_ang_vel, Value: 4
+2025-05-26 11:44:48.932 | INFO     | humanoidverse.envs.env_utils.history_handler:__init__:27 - Key: projected_gravity, Value: 4
+2025-05-26 11:44:48.932 | INFO     | humanoidverse.envs.env_utils.history_handler:__init__:27 - Key: dof_pos, Value: 4
+2025-05-26 11:44:48.932 | INFO     | humanoidverse.envs.env_utils.history_handler:__init__:27 - Key: dof_vel, Value: 4
+2025-05-26 11:44:48.932 | INFO     | humanoidverse.envs.env_utils.history_handler:__init__:27 - Key: actions, Value: 4
+2025-05-26 11:44:48.932 | INFO     | humanoidverse.envs.env_utils.history_handler:__init__:27 - Key: ref_motion_phase, Value: 4
+2025-05-26 11:44:48.933 | INFO     | humanoidverse.utils.motion_lib.motion_lib_base:__init__:56 - Loaded skeleton from humanoidverse/data/robots/g1/g1_29dof_anneal_23dof_fitmotionONLY.xml
+2025-05-26 11:44:48.933 | INFO     | humanoidverse.utils.motion_lib.motion_lib_base:__init__:57 - Loading motion data from humanoidverse/data/motions/g1_29dof_anneal_23dof/TairanTestbed/singles/standing_motion_300frames.pkl...
+2025-05-26 11:44:48.934 | INFO     | humanoidverse.utils.motion_lib.motion_lib_base:load_data:90 - Loaded 1 motions
+2025-05-26 11:44:49.347 | INFO     | humanoidverse.utils.motion_lib.motion_lib_base:load_motions:266 - Loading 4096 motions...
+2025-05-26 11:44:49.348 | INFO     | humanoidverse.utils.motion_lib.motion_lib_base:load_motions:267 - Sampling motion: tensor([0, 0, 0, 0, 0], device='cuda:0'), ....
+2025-05-26 11:44:49.348 | INFO     | humanoidverse.utils.motion_lib.motion_lib_base:load_motions:268 - Current motion keys: ['standing_motion_300frames' 'standing_motion_300frames'
+ 'standing_motion_300frames' 'standing_motion_300frames'
+ 'standing_motion_300frames'], ....
+2025-05-26 11:45:41.852 | INFO     | humanoidverse.utils.motion_lib.motion_lib_base:load_motions:348 - Loaded 4096 motions with a total length of 40822.344s and 1228800 frames.
+2025-05-26 11:45:41.947 | INFO     | humanoidverse.envs.motion_tracking.motion_tracking:__init__:53 - Terminate when motion far threshold: 1.5
+2025-05-26 11:45:41.950 | INFO     | __main__:main:116 - Saving config file to logs/MotionTracking/20250526_114429-MotionTracking_Stand-motion_tracking-g1_29dof_anneal_23dof
+2025-05-26 11:45:43.432 | INFO     | humanoidverse.agents.ppo.ppo:setup:94 - Setting up PPO
+2025-05-26 11:45:43.868 | INFO     | humanoidverse.agents.ppo.ppo:setup:96 - Setting up Storage
+2025-05-26 11:45:47.278 | INFO     | humanoidverse.agents.ppo.ppo:save:158 - Saving checkpoint to logs/MotionTracking/20250526_114429-MotionTracking_Stand-motion_tracking-g1_29dof_anneal_23dof/model_0.pt
+2025-05-26 12:49:03.704 | INFO     | humanoidverse.agents.ppo.ppo:save:158 - Saving checkpoint to logs/MotionTracking/20250526_114429-MotionTracking_Stand-motion_tracking-g1_29dof_anneal_23dof/model_1000.pt
+2025-05-26 13:49:15.213 | INFO     | humanoidverse.agents.ppo.ppo:save:158 - Saving checkpoint to logs/MotionTracking/20250526_114429-MotionTracking_Stand-motion_tracking-g1_29dof_anneal_23dof/model_2000.pt
+2025-05-26 14:46:08.859 | INFO     | humanoidverse.agents.ppo.ppo:save:158 - Saving checkpoint to logs/MotionTracking/20250526_114429-MotionTracking_Stand-motion_tracking-g1_29dof_anneal_23dof/model_3000.pt
+2025-05-26 15:41:04.758 | INFO     | humanoidverse.agents.ppo.ppo:save:158 - Saving checkpoint to logs/MotionTracking/20250526_114429-MotionTracking_Stand-motion_tracking-g1_29dof_anneal_23dof/model_4000.pt
+2025-05-26 16:37:03.634 | INFO     | humanoidverse.agents.ppo.ppo:save:158 - Saving checkpoint to logs/MotionTracking/20250526_114429-MotionTracking_Stand-motion_tracking-g1_29dof_anneal_23dof/model_5000.pt
+2025-05-26 17:31:13.135 | INFO     | humanoidverse.agents.ppo.ppo:save:158 - Saving checkpoint to logs/MotionTracking/20250526_114429-MotionTracking_Stand-motion_tracking-g1_29dof_anneal_23dof/model_6000.pt
+2025-05-26 18:22:29.876 | INFO     | humanoidverse.agents.ppo.ppo:save:158 - Saving checkpoint to logs/MotionTracking/20250526_114429-MotionTracking_Stand-motion_tracking-g1_29dof_anneal_23dof/model_7000.pt
