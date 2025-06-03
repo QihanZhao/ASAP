@@ -65,11 +65,11 @@ obs:
   }
 
   noise_scales: {
-    base_lin_vel: 0.0,
+    base_lin_vel: 0.05,
     base_ang_vel: 0.3,
     projected_gravity: 0.2,
     dof_pos: 0.01,
-    dof_vel: 1.0,
+    dof_vel: 0.2,
     actions: 0.0,
     dif_local_rigid_body_pos: 0.0,
     local_ref_rigid_body_pos: 0.0,
